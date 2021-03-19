@@ -15,12 +15,12 @@ body {
     background-color: grey;
 }
 
-.container {
+/* .container {
     background-color: white;
     border-radius: 10px;we
     padding: 50px;
     width: 50%;
-}
+} */
 
 .btn-grid {
     display: grid;

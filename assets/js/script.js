@@ -1,8 +1,33 @@
+function Quiz(theQuestions) {
+    this.score= 0;
+    this.theQuestions= theQuestions;
+    this.questionIndex= 0;
+}
+
+Quiz.prototype.getQuestionIndex= function() {
+    return this.theQuestions[this.questionIndex];
+}
+
+Quiz.prototype.guess= function(answer) {
+    if (this.getQuestionIndex().isCorrectAnswer(answer)) {
+        this.score ++;
+    }
+    this.questionIndex ++;
+}
+
+Quiz.prototype.isEnded= function() {
+    return this.questionIndex=== this.theQuestions.length;
+}
+
 // decelaring function with three arguments
 function Ques(questioning,choices,answer) {
     this.questioning= questioning;
     this.choices= choices;
     this.answer= answer;
+}
+
+Ques.prototype.isCorrectAnswer= function(choice) {
+    return this.answer=== choice;
 }
 
 // start game
@@ -11,17 +36,26 @@ function startGame() {
         showScores();
     }
     else {
-        var questionEl= document.getElementById("question");
-        questionEl.innerHTML= quizQuestionIndex().questioning;
+        var element= document.getElementById("question");
+        element.innerHTML= quiz.getQuestionIndex().questioning;
 
         var choices= quiz.getQuestionIndex().choices;
         for (var i=0; i<choices.length; i++) {
-            var choicesEl= document.getElementById("choice" + i);
-            choicesEl.innerHTML= choices[i];
+            var element= document.getElementById("choice" + i);
+            element.innerHTML= choices[i];
             guess("btn" + i, choices[i]);
         }
     }
 };
+
+function guess(id, guess) {
+    var button= document.getElementById(id);
+    button.click= function() {
+        quiz.guess(guess);
+        startGame();
+    }
+};
+
 
 function showScores() {
     var gameOver= quiz.score;
@@ -35,6 +69,11 @@ var theQuestions= [
     new Ques("President of USA?",["Donald Trump","Barak Obama","Joe Biden","George Bush"],"Joe Biden"),
     new Ques("2+2?",["4","0","-4","none"],"4")
 ];
+
+var quiz= new Quiz(theQuestions);
+
+
+startGame();
 
 
 
