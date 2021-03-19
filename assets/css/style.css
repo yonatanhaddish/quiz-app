@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vw;
+    width: 100vw;
+    background-color: grey;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;we
+    padding: 50px;
+    width: 50%;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 30px;
+    padding: ;
+
+}
+
+.btn {
+    border-radius: 10px;
+    outline: none;
+    padding: o;
+}
+
+.start-button {
+    padding: 20px 0 20px 20px ;
+}
+
+.btn:hover {
+    border-color: black;
+    border: solid 3px;
+    
+}
+
+.start-button {
+    font-size: 40px;
+}
+
+.hide {
+    display: none;
+}
