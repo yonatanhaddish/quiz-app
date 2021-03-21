@@ -15,40 +15,23 @@ body {
     background-color: grey;
 }
 
-/* .container {
-    background-color: white;
-    border-radius: 10px;we
-    padding: 50px;
-    width: 50%;
-} */
-
-.btn-grid {
+.buttons {
     display: grid;
     gap: 30px;
-    padding: ;
-
-}
-
-.btn {
     border-radius: 10px;
     outline: none;
     padding: o;
 }
 
-.start-button {
-    padding: 20px 0 20px 20px ;
-}
-
-.btn:hover {
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     border-color: black;
     border: solid 3px;
     
 }
 
-.start-button {
-    font-size: 40px;
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3 {
+    border-radius: 10px;
+    outline: none;
+    padding: o;
 }
 
-/* .hide {
-    display: none;
-} */

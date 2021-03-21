@@ -1,32 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Quiz App</title>
-    
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="quiz">
-
-        <div id="quiz-container">
-            <div id="question"></div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+    <span id="countdown"></span>
+    <div class="container">
+        <div id="quiz">
+            
+ 
+            <p id="question"></p>
+ 
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
             </div>
+ 
+            
         </div>
-
-        <div class="start-button">
-            <button id="start-btn" class="start-btn btn">Start</button>
-        </div>
-
     </div>
-    
-<script src="./assets/js/script.js"></script>  
+ 
+ 
+<script src="./assets/js/script.js"></script>
+ 
 </body>
 </html>
