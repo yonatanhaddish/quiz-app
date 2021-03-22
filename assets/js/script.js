@@ -12,7 +12,7 @@ gameQuiz.prototype.guess = function(answer) {
     if(this.getQuestionIndex().isCorrectAnswer(answer)) {
         this.score++;
     }
-    else seconds-=10;
+    else seconds-=5; // if wrong answer then deduct 5 seconds
  
     this.questionIndex++;
 }
@@ -26,6 +26,7 @@ function Question(text, choices, answer) {
     this.text = text;
     this.choices = choices;
     this.answer = answer;
+    
 }
  
 Question.prototype.isCorrectAnswer = function(choice) {
@@ -49,8 +50,8 @@ function startGame() {
             element.innerHTML = choices[i];
             guess("btn" + i, choices[i]);
         }
+            
  
-        //showProgress();
     }
 };
  
@@ -70,7 +71,7 @@ function showScores() {
 };
 
 // setting counter
-var seconds = 100, $seconds = document.querySelector('#countdown');
+var seconds = 60, $seconds = document.querySelector('#countdown');
 (function countdown() {
     $seconds.textContent = seconds + ' second' + (seconds == 1 ?  '' :  's')
     if(seconds --> 0) setTimeout(countdown, 1000)
